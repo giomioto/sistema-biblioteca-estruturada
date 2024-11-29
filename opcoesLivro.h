@@ -10,6 +10,7 @@ void excluirLivro(rgLivro *lstLivro, int nLivro, rgUsuario *lstUsuario, int nUsu
 void listarLivro(rgLivro *lstLivro, int nLivro, rgUsuario *lstUsuario, int nUsuario);
 
 void emprestarLivro(rgLivro *lstLivro, int nLivro, rgUsuario *lstUsuario, int nUsuario);
+void devolverLivro(rgLivro *lstLivro, int nLivro, rgUsuario *lstUsuario, int nUsuario);
 
 void importarLivros(rgLivro *lstLivro, int *nLivro, rgUsuario *lstUsuario, int nUsuario);
 void exportarLivro(rgLivro *lstLivro, int nLivro);

@@ -79,13 +79,13 @@ void excluirUsuario(rgUsuario *lstUsuario, int nUsuario, rgLivro *lstLivro, int 
     {
         if (confirmou("Confirma a exclusão? (S/*): "))
         {
+            printf("Id do usuario: %d | Posicao: %d | Nome: %s\n", idUsuario, posicao, lstUsuario[posicao].nome);
             setSitUsuario(&lstUsuario[posicao], ' ');
             for(int i = 0; i < nLivro; i++)
             {
                 if(getIdUsuarioLivro(&lstLivro[i]) == idUsuario)
                 {
                     setIdUsuarioLivro(&lstLivro[i], -1);
-                    printf("Id do usuario: %d | Posicao: %d | Nome: %s\n", idUsuario, posicao, lstUsuario[posicao].nome);
                 }
             }
             printf("<<<< Confirmado >>>>\n\n\n");

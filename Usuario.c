@@ -36,18 +36,21 @@ int *getLivrosEmprestadosUsuario(rgUsuario *usuario){
     return usuario->livrosEmprestados;
 }
 void setLivrosEmprestadosUsuario(rgUsuario *usuario, int idLivro){
+    int flag = 0;
     for (int i = 0; i < MAXLIVROS; i++){
-        if (usuario->livrosEmprestados[i] == -1){
+        if (usuario->livrosEmprestados[i] == 0){
             usuario->livrosEmprestados[i] = idLivro;
+            flag = 1;
+            printf("<<<< Confirmado >>>>\n\n\n");
             break;
         }
         else if (usuario->livrosEmprestados[i] == idLivro){
             printf("Livro já emprestado!");
             break;
         }
-        if (i == MAXLIVROS - 1){
-            printf("Limite de livros emprestados atingido!");
-        }
+    }
+    if(flag == 0){
+        printf("Usuário já atingiu o limite de livros emprestados!\n\n\n");
     }
 }
 
