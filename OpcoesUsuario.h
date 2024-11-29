@@ -12,4 +12,6 @@ void listarUsuario(rgUsuario *lstUsuario, int nUsuario, rgLivro *lstLivro, int n
 void importarUsuarios(rgUsuario *lstUsuario, int *nUsuario);
 void exportarUsuario(rgUsuario *lstUsuario, int nUsuario);
 
+void exportarListaLivrosUsuario(rgUsuario *lstUsuario, int nUsuario, rgLivro *lstLivro, int nLivro);
+
 #endif // OPCOESUSUARIO_H_INCLUDED

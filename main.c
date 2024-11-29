@@ -61,6 +61,7 @@ int main()
 
     exportarUsuario(lstUsuario, nUsuario);
     exportarLivro(lstLivro, nLivro);
+    exportarListaLivrosUsuario(lstUsuario, nUsuario, lstLivro, nLivro);
 
     return (0);
 }

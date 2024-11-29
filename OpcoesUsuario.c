@@ -162,6 +162,31 @@ void importarUsuarios(rgUsuario *usuarios, int *nUsuarios) {
     fclose(arq);
 }
 
+void exportarListaLivrosUsuario(rgUsuario *usuarios, int nUsuarios, rgLivro *livros, int nLivros) {
+    FILE *arq;
+    arq = fopen("listalivros.txt", "w");
+    
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo livros_usuario.txt\n");
+        return;
+    }
+
+    for (int i = 0; i < nUsuarios; i++) {
+        for (int j = 0; j < MAXLIVROS; j++) {
+            if (usuarios[i].livrosEmprestados[j] != -1) {
+                int posicaoLivro = acharLivro(livros, nLivros, usuarios[i].livrosEmprestados[j]);
+                if (posicaoLivro != -1) {
+                    fprintf(arq, "%d;%d;%s\n", 
+                            usuarios[i].id, 
+                            livros[posicaoLivro].codigo, 
+                            livros[posicaoLivro].titulo);
+                }
+            }
+        }
+    }
+    fclose(arq);
+}
+
 void exportarUsuario(rgUsuario *usuarios, int nUsuarios) {
     FILE *arq;
     arq = fopen("usuarios.txt", "w");
