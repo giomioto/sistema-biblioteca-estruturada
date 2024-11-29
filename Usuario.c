@@ -12,7 +12,7 @@ rgUsuario Usuario(int id, char nome[], char sexo, int idade, int cpf, char sit){
     usuario.idade = idade;
     usuario.cpf = cpf;
     for (int i = 0; i < MAXLIVROS; i++){
-        usuario.livrosEmprestados[i] = -1;
+        usuario.livrosEmprestados[i] = 0;
     }
     usuario.sit = sit;
     return usuario;
