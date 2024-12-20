@@ -1,4 +1,4 @@
-1;Dom Casmurro;Machado de Assis;1899;-1;X
+1;Dom Casmurro;Machado de Assis;1899;-1; 
 2;O Alquimista;Paulo Coelho;1988;2;X
 3;1984;George Orwell;1949;7;X
 4;O Senhor dos Anéis;J.R.R. Tolkien;1954;7;X
@@ -9,3 +9,4 @@
 9;Crime e Castigo;Fiódor Dostoiévski;1866;6;X
 10;O Morro dos Ventos Uivantes;Emily Brontë;1847;7;X
 11;ETA MUNDO BOM;Joao Neves;19888;11;X
+12;O Admiravel mundo novo;Aldous Huxley;1932;-1;X

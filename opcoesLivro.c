@@ -63,8 +63,12 @@ void excluirLivro(rgLivro *lstLivro, int nLivro, rgUsuario *lstUsuario, int nUsu
     int posicaoUsuario;
     cls();
     printf("<<<<< EXCLUIR LIVROS >>>>>\n\n");
-    printf("Identificacao do Livro: ");
+    printf("Identificacao do Livro (0 para encerrar): ");
     scanf("%d", &idLivro);
+    if (idLivro == 0)
+    {
+        return;
+    }
     posicao = acharLivro(lstLivro, nLivro, idLivro);
     if (posicao == -1)
     {

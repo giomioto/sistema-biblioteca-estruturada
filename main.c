@@ -28,10 +28,11 @@ int main()
         printf("[ 1 ] Cadastrar Livros\n");
         printf("[ 2 ] Excluir Livros\n");
         printf("[ 3 ] Listar Livros\n");
-        printf("[ 4 ] Emprestar livro\n\n");
-        printf("[ 5 ] Cadastrar Usuarios\n");
-        printf("[ 6 ] Excluir Usuarios\n");
-        printf("[ 7 ] Listar Usuarios\n");
+        printf("[ 4 ] Emprestar Livro\n");
+        printf("[ 5 ] Devolver Livro\n");
+        printf("[ 6 ] Cadastrar Usuários\n");
+        printf("[ 7 ] Excluir Usuários\n");
+        printf("[ 8 ] Listar Usuários\n");
         printf("[ 0 ] Encerrar\n");
         printf("**********************************\n");
 
@@ -39,7 +40,7 @@ int main()
         {
             printf("Opção Desejada? ");
             scanf("%d", &opcao);
-        } while ((opcao < 0) || (opcao > 7));
+        } while ((opcao < 0) || (opcao > 8));
 
         printf("\n");
         if (opcao == 1)
@@ -51,10 +52,12 @@ int main()
         else if (opcao == 4)
             emprestarLivro(lstLivro, nLivro, lstUsuario, nUsuario);
         else if (opcao == 5)
-            entradaUsuario(lstUsuario, &nUsuario);
+            devolverLivro(lstLivro, nLivro, lstUsuario, nUsuario);
         else if (opcao == 6)
-            excluirUsuario(lstUsuario, nUsuario, lstLivro, nLivro);
+            entradaUsuario(lstUsuario, &nUsuario);
         else if (opcao == 7)
+            excluirUsuario(lstUsuario, nUsuario, lstLivro, nLivro);
+        else if (opcao == 8)
             listarUsuario(lstUsuario, nUsuario, lstLivro, nLivro);
 
     } while (opcao != 0);

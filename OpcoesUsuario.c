@@ -68,8 +68,12 @@ void excluirUsuario(rgUsuario *lstUsuario, int nUsuario, rgLivro *lstLivro, int 
     int posicao;
     cls();
     printf("<<<<< EXCLUIR USUARIOS >>>>>\n\n");
-    printf("Identificacao do Usuario: ");
+    printf("Identificacao do Usuario (0 para encerrar): ");
     scanf("%d", &idUsuario);
+    if (idUsuario == 0)
+    {
+        return;
+    }
     posicao = acharUsuario(lstUsuario, nUsuario, idUsuario);
     if (posicao == -1)
     {
