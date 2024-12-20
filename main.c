@@ -1,3 +1,15 @@
+/*----------------------------------------
+PROJETO FINAL I - TECNICAS DE PROGRAMACAO
+------------------------------------------
+ESTUDANTE: GIOVANNI MIOTO
+RA: 2603454
+------------------------------------------
+BIBLIOTECA EM LINGUAGEM ESTRUTURADA
+----------------------------------------*/
+
+
+
+
 #include <stdio.h>
 #include <ctype.h>
 #include "Livro.h"
